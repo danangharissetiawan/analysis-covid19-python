@@ -7,4 +7,22 @@ Datasets --> https://data.humdata.org/dataset/novel-coronavirus-2019-ncov-cases
 
 To shorten and simplify the work, we are using two great python libraries namely `Pandas <https://pandas.pydata.org/>`__ and `Matplotlib <https://matplotlib.org/>`__.
 
+Visualisation Preview
+-------------
 
+.. image:: data1.png
+    :target: data1.png
+    :height: 300px
+
+
+.. image:: data2.png
+    :target: data2.png
+    :height: 300px
+
+
+Simulation Preview
+-------------
+
+.. image:: simulasi.png
+    :target: simulsi.png
+    :height: 300px
