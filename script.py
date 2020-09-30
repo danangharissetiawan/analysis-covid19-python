@@ -104,25 +104,25 @@ estimated_death_rate = 0.03
 
 
 # Mensimulasikan
-# simulation_growth_rate = 0.1
-# dates = pd.date_range(start='10/28/2020', periods=40, freq='D')
-# dates = pd.Series(dates)
-# dates = dates.dt.strftime('%m/%d/%Y')
+simulation_growth_rate = 0.1
+dates = pd.date_range(start='08/28/2020', periods=40, freq='D')
+dates = pd.Series(dates)
+dates = dates.dt.strftime('%m/%d/%Y')
 
-# simulated = confirmed.copy()
-# simulated = simulated.append(pd.DataFrame(index=dates))
+simulated = confirmed.copy()
+simulated = simulated.append(pd.DataFrame(index=dates))
 
-# for day in range(len(confirmed), len(confirmed)+40):
-#     simulated.iloc[day] = simulated.iloc[day - 1] * \
-#         (simulation_growth_rate * 1)
+for day in range(len(confirmed), len(confirmed)+40):
+    simulated.iloc[day] = simulated.iloc[day - 1] * \
+        (simulation_growth_rate + 1)
 
-# ax = simulated['Indonesia'][10:].plot(label='Indonesia')
-# ax.set_axisbelow(True)
-# ax.set_facecolor('black')
-# ax.figure.set_facecolor('#121212')
-# ax.tick_params(axis='x', colors='white')
-# ax.tick_params(axis='y', colors='white')
-# ax.set_title('COVID 19 Indonesia', color='white')
-# ax.legend(loc='upper left')
+ax = simulated['Indonesia'][10:].plot(label='Indonesia')
+ax.set_axisbelow(True)
+ax.set_facecolor('black')
+ax.figure.set_facecolor('#121212')
+ax.tick_params(axis='x', colors='white')
+ax.tick_params(axis='y', colors='white')
+ax.set_title('Simulasi COVID 19 Indonesia 40 Hari Kedepan', color='white')
+ax.legend(loc='upper left')
 
-# plt.show()
+plt.show()
